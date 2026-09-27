@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 
-const LINE_URL = "https://lin.ee/Xk3fJsq";
+const LINE_URL = "https://lin.ee/6BR0r4E";
 const PHONE = "0967-291-352";
 const PHONE_HREF = "tel:0967-291-352";
 
