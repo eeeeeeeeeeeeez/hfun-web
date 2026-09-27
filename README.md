@@ -35,8 +35,11 @@ git push -u origin main
 
 之後只要 `git push` 到 `main` 分支，Vercel 會自動重新部署。
 
+## 換上正式 Logo
+
+目前 `/public/logo.svg` 是暫用的圓形標誌，只要把你正式的 Logo 檔案（建議 SVG 或 PNG，正方形尺寸）覆蓋同一個檔名 `public/logo.svg`（PNG 的話記得同步修改 `app/page.tsx` 裡 `Image src="/logo.svg"` 的副檔名），header 和 footer 就會自動換成新 Logo，不用改版面。
+
 ## 之後可以做的事
 
-- 補上真實 Logo（放到 `/public`，並在 `app/page.tsx` / `app/layout.tsx` 引用）
 - 如需諮詢表單，可以之後加一支 API Route（`app/api/contact/route.ts`）串接 email 或 LINE 通知
 - 網站文案（服務項目、方案利率、免責聲明）目前沿用既有資料，正式上線前請再次確認利率與法規揭露內容是否為最新版本

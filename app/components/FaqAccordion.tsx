@@ -27,7 +27,7 @@ export default function FaqAccordion({ items }: { items: FaqItem[] }) {
               </span>
               <span
                 aria-hidden="true"
-                className={`mt-1 shrink-0 text-xl text-gold transition-transform duration-200 ${
+                className={`mt-1 shrink-0 text-xl text-steel transition-transform duration-200 ${
                   isOpen ? "rotate-45" : ""
                 }`}
               >

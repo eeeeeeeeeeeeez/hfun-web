@@ -1,4 +1,13 @@
+import Image from "next/image";
 import FaqAccordion from "./components/FaqAccordion";
+import LineFloatingButton from "./components/LineFloatingButton";
+import {
+  IconWallet,
+  IconHelmet,
+  IconCross,
+  IconSprout,
+  IconHouse,
+} from "./components/ServiceIcons";
 
 const LINE_URL = "https://lin.ee/Xk3fJsq";
 const PHONE = "0967-291-352";
@@ -7,11 +16,11 @@ const LINE_ID = "@384dvqmw";
 const ADDRESS = "台北市內湖區瑞光路8號3樓";
 
 const services = [
-  { title: "小額週轉", desc: "臨時支出、生活周轉，最快當日撥款。" },
-  { title: "勞工紓困", desc: "具備勞保資格即可評估申請方案。" },
-  { title: "醫療急用", desc: "醫療費用來得突然，資金到位不拖延。" },
-  { title: "創業營運", desc: "營運資金即刻投入，不錯過生意時機。" },
-  { title: "生活資金調度", desc: "房租、學費、季節性開銷，彈性調度。" },
+  { title: "小額週轉", desc: "臨時支出、生活周轉，最快當日撥款。", Icon: IconWallet },
+  { title: "勞工紓困", desc: "具備勞保資格即可評估申請方案。", Icon: IconHelmet },
+  { title: "醫療急用", desc: "醫療費用來得突然，資金到位不拖延。", Icon: IconCross },
+  { title: "創業營運", desc: "營運資金即刻投入，不錯過生意時機。", Icon: IconSprout },
+  { title: "生活資金調度", desc: "房租、學費、季節性開銷，彈性調度。", Icon: IconHouse },
 ];
 
 const loanPlans = [
@@ -89,13 +98,24 @@ const testimonials = [
 
 export default function Home() {
   return (
-    <main>
+    <main id="top">
+      <LineFloatingButton />
       {/* Header */}
       <header className="sticky top-0 z-40 border-b border-navy-950/10 bg-paper/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <span className="font-serif text-xl font-bold tracking-tight text-navy-950">
-            好放貸
-          </span>
+          <a href="#top" className="flex items-center gap-2.5">
+            <Image
+              src="/logo-full.jpg"
+              alt="好放貸"
+              width={40}
+              height={40}
+              priority
+              className="rounded-md"
+            />
+            <span className="font-serif text-xl font-bold tracking-tight text-navy-950">
+              好放貸
+            </span>
+          </a>
           <nav className="hidden items-center gap-8 text-sm font-medium text-navy-950/80 md:flex">
             <a href="#services" className="hover:text-navy-950">貸款項目</a>
             <a href="#plans" className="hover:text-navy-950">方案試算</a>
@@ -104,8 +124,11 @@ export default function Home() {
           </nav>
           <a
             href={LINE_URL}
-            className="rounded-sm bg-navy-950 px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-navy-800"
+            className="flex items-center gap-2 rounded-full bg-[#06C755] px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-[#05b34c]"
           >
+            <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden="true">
+              <path d="M12 2C6.48 2 2 5.69 2 10.24c0 4.08 3.55 7.5 8.35 8.14.32.07.77.22.88.5.1.26.06.66.03.92l-.14 1.03c-.04.3-.24 1.17 1.02.64 1.27-.53 6.85-4.03 9.35-6.9C22.98 12.8 24 11.62 24 10.24 24 5.69 18.63 2 12 2Z" />
+            </svg>
             加 LINE 諮詢
           </a>
         </div>
@@ -113,9 +136,9 @@ export default function Home() {
 
       {/* Hero */}
       <section className="bg-navy-950 text-paper">
-        <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[1.2fr_1fr] md:py-28">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 py-20 md:grid-cols-[1.1fr_1fr] md:py-24">
           <div>
-            <p className="font-serif text-sm font-medium tracking-wide text-gold-light">
+            <p className="font-serif text-sm font-medium tracking-wide text-leaf-light">
               好放貸，就是好貸
             </p>
             <h1 className="mt-4 max-w-md font-serif text-4xl font-bold leading-tight md:text-5xl">
@@ -130,8 +153,11 @@ export default function Home() {
             <div className="mt-9 flex flex-wrap gap-4">
               <a
                 href={LINE_URL}
-                className="rounded-sm bg-gold px-6 py-3 text-sm font-medium text-navy-950 transition-colors hover:bg-gold-light"
+                className="flex items-center gap-2 rounded-full bg-[#06C755] px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-black/20 transition-transform hover:scale-[1.03]"
               >
+                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2C6.48 2 2 5.69 2 10.24c0 4.08 3.55 7.5 8.35 8.14.32.07.77.22.88.5.1.26.06.66.03.92l-.14 1.03c-.04.3-.24 1.17 1.02.64 1.27-.53 6.85-4.03 9.35-6.9C22.98 12.8 24 11.62 24 10.24 24 5.69 18.63 2 12 2Z" />
+                </svg>
                 LINE 免費諮詢
               </a>
               <a
@@ -142,14 +168,16 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <dl className="grid grid-cols-2 gap-px overflow-hidden self-end border border-paper/15 text-sm md:self-center">
-            {services.slice(0, 4).map((s) => (
-              <div key={s.title} className="bg-navy-800/60 p-5">
-                <dt className="font-serif text-base font-medium text-gold-light">{s.title}</dt>
-                <dd className="mt-1 text-paper/70">{s.desc}</dd>
-              </div>
-            ))}
-          </dl>
+          <div className="mx-auto w-full max-w-sm overflow-hidden rounded-lg border border-paper/10 shadow-2xl shadow-black/40 md:max-w-none">
+            <Image
+              src="/hero-mascot.jpg"
+              alt="好放貸專業資金規劃諮詢：全程線上辦理、隱私保密、免保人"
+              width={1000}
+              height={1000}
+              priority
+              className="h-full w-full object-cover"
+            />
+          </div>
         </div>
       </section>
 
@@ -176,9 +204,13 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-6">
           <h2 className="font-serif text-2xl font-bold text-navy-950 md:text-3xl">貸款項目</h2>
           <div className="mt-10 grid gap-px overflow-hidden border border-navy-950/10 bg-navy-950/10 sm:grid-cols-2 lg:grid-cols-5">
-            {services.map((s) => (
-              <div key={s.title} className="border-l-2 border-gold bg-paper p-6">
-                <h3 className="font-serif text-lg font-medium text-navy-950">{s.title}</h3>
+            {services.map((s, i) => (
+              <div
+                key={s.title}
+                className={`border-l-2 bg-paper p-6 ${i % 2 === 0 ? "border-steel" : "border-leaf"}`}
+              >
+                <s.Icon className={`h-8 w-8 ${i % 2 === 0 ? "text-steel-dark" : "text-leaf-dark"}`} />
+                <h3 className="mt-4 font-serif text-lg font-medium text-navy-950">{s.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink/70">{s.desc}</p>
               </div>
             ))}
@@ -230,7 +262,11 @@ export default function Home() {
           <ol className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {process.map((step, i) => (
               <li key={step.title} className="relative pl-0">
-                <span className="font-serif text-4xl font-bold text-gold/50">
+                <span
+                  className={`font-serif text-4xl font-bold ${
+                    i % 2 === 0 ? "text-steel/50" : "text-leaf/50"
+                  }`}
+                >
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <h3 className="mt-2 font-serif text-lg font-medium text-navy-950">
@@ -248,7 +284,7 @@ export default function Home() {
         <h2 className="font-serif text-2xl font-bold text-navy-950 md:text-3xl">成功案例</h2>
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {testimonials.map((t) => (
-            <figure key={t.name} className="border-t-2 border-gold pt-5">
+            <figure key={t.name} className="border-t-2 border-steel pt-5">
               <blockquote className="text-[15px] leading-relaxed text-ink/80">
                 「{t.quote}」
               </blockquote>
@@ -286,7 +322,7 @@ export default function Home() {
         <p className="mt-4">
           以信用貸款為例：假設貸款金額 30 萬元，貸款期間 5 年，貸款利率 6.25%，其他相關費用共 9,000 元，則總費用年百分率約為 7.59%，貸款本息合計 350,100 元加相關手續費用 9,000 元，共計 359,100 元。
         </p>
-        <p className="mt-4 border-l-2 border-gold pl-4 text-ink/60">
+        <p className="mt-4 border-l-2 border-steel pl-4 text-ink/60">
           免責申明：本網站資料僅供參考，實際利率及貸款方案詳細約定應以貸款申請書及約定書為準。本網站僅提供借貸資訊供需平台，並不涉入其中任何借貸資訊之諮詢與交易。
         </p>
       </section>
@@ -294,7 +330,7 @@ export default function Home() {
       {/* Fraud warning */}
       <section className="border-t border-navy-950/10 bg-navy-950 py-16 text-paper">
         <div className="mx-auto max-w-3xl px-6">
-          <h2 className="font-serif text-xl font-bold text-gold-light">防範詐騙提醒</h2>
+          <h2 className="font-serif text-xl font-bold text-leaf-light">防範詐騙提醒</h2>
           <p className="mt-3 text-sm text-paper/70">保護您的財產安全，認識正規貸款的重要原則：</p>
           <ul className="mt-5 space-y-2 text-sm leading-relaxed text-paper/85">
             <li>・請不要提供銀行存摺及提款卡，以免成為詐騙集團的共犯。</li>
@@ -313,13 +349,24 @@ export default function Home() {
       <footer className="bg-paper py-14">
         <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 sm:flex-row sm:items-start sm:justify-between">
           <div>
-            <span className="font-serif text-lg font-bold text-navy-950">好放貸</span>
-            <p className="mt-2 max-w-xs text-sm text-ink/60">
+            <div className="flex items-center gap-2.5">
+              <Image src="/logo-full.jpg" alt="好放貸" width={36} height={36} className="rounded-md" />
+              <span className="font-serif text-lg font-bold text-navy-950">好放貸</span>
+            </div>
+            <p className="mt-3 max-w-xs text-sm text-ink/60">
               專業資金規劃，快速、安心。24 小時全年無休服務。
             </p>
           </div>
-          <div className="space-y-1 text-sm text-ink/70">
-            <p>LINE ID：{LINE_ID}</p>
+          <div className="space-y-2 text-sm text-ink/70">
+            <a
+              href={LINE_URL}
+              className="flex items-center gap-2 font-medium text-[#06C755] hover:underline"
+            >
+              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 5.69 2 10.24c0 4.08 3.55 7.5 8.35 8.14.32.07.77.22.88.5.1.26.06.66.03.92l-.14 1.03c-.04.3-.24 1.17 1.02.64 1.27-.53 6.85-4.03 9.35-6.9C22.98 12.8 24 11.62 24 10.24 24 5.69 18.63 2 12 2Z" />
+              </svg>
+              LINE ID：{LINE_ID}
+            </a>
             <p>客服電話：{PHONE}</p>
             <p>地址：{ADDRESS}</p>
           </div>
