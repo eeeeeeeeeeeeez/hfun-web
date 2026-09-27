@@ -12,7 +12,7 @@ import {
 const LINE_URL = "https://lin.ee/6BR0r4E";
 const PHONE = "0967-291-352";
 const PHONE_HREF = "tel:0967-291-352";
-const LINE_ID = "@384dvqmw";
+const LINE_ID = "@fun2727";
 const ADDRESS = "台北市內湖區瑞光路8號3樓";
 
 const services = [
