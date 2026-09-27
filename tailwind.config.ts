@@ -25,8 +25,20 @@ const config: Config = {
         ink: "#1A2233",
       },
       fontFamily: {
-        serif: ["var(--font-serif)", "serif"],
-        sans: ["var(--font-sans)", "sans-serif"],
+        serif: [
+          "Microsoft JhengHei",
+          "微軟正黑體",
+          "PingFang TC",
+          "var(--font-serif)",
+          "sans-serif",
+        ],
+        sans: [
+          "Microsoft JhengHei",
+          "微軟正黑體",
+          "PingFang TC",
+          "var(--font-sans)",
+          "sans-serif",
+        ],
       },
       maxWidth: {
         prose: "72ch",

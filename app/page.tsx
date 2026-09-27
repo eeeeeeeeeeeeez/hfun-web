@@ -139,16 +139,16 @@ export default function Home() {
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 py-20 md:grid-cols-[1.1fr_1fr] md:py-24">
           <div>
             <p className="font-serif text-sm font-medium tracking-wide text-gold-light">
-              好放貸，就是好貸
+              2026年小額貸款利率最優選
             </p>
             <h1 className="mt-4 max-w-md font-serif text-4xl font-bold leading-tight md:text-5xl">
-              資金週轉的每一步，
+              快速貸款，
               <br />
-              都有專人陪你走清楚
+              即時滿足您的需求
             </h1>
             <p className="mt-6 max-w-md text-[15px] leading-relaxed text-paper/75">
-              小額週轉、醫療急用、創業營運、生活資金調度——一對一專人評估，
-              流程透明公開，避免不必要的時間浪費與申請壓力。
+              提供台灣(含離島)小額貸款服務，線上貸款流程簡單透明，
+              無需抵押、無需擔保的小額貸款，讓您資金周轉更靈活。
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <a
@@ -168,7 +168,10 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="mx-auto w-full max-w-sm overflow-hidden rounded-lg border border-paper/10 shadow-2xl shadow-black/40 md:max-w-none">
+          <a
+            href="/line"
+            className="mx-auto block w-full max-w-sm overflow-hidden rounded-lg border border-paper/10 shadow-2xl shadow-black/40 transition-transform hover:scale-[1.02] md:max-w-none"
+          >
             <Image
               src="/hero-mascot.jpg"
               alt="好放貸專業資金規劃諮詢：全程線上辦理、隱私保密、免保人"
@@ -177,7 +180,7 @@ export default function Home() {
               priority
               className="h-full w-full object-cover"
             />
-          </div>
+          </a>
         </div>
       </section>
 
