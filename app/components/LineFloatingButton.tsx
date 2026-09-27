@@ -1,6 +1,6 @@
 "use client";
 
-const LINE_URL = "https://lin.ee/Xk3fJsq";
+const LINE_URL = "https://lin.ee/6BR0r4E";
 
 function LineGlyph({ className }: { className?: string }) {
   return (

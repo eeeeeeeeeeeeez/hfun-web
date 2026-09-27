@@ -6,9 +6,9 @@ const config: Config = {
     extend: {
       colors: {
         navy: {
-          950: "#0B2A6C",
-          800: "#123489",
-          700: "#1B3F9E",
+          950: "#13337B",
+          800: "#1B408F",
+          700: "#234DA3",
         },
         paper: "#F4F6F8",
         steel: {

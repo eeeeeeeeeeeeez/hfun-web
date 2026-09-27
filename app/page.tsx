@@ -9,7 +9,7 @@ import {
   IconHouse,
 } from "./components/ServiceIcons";
 
-const LINE_URL = "https://lin.ee/Xk3fJsq";
+const LINE_URL = "https://lin.ee/6BR0r4E";
 const PHONE = "0967-291-352";
 const PHONE_HREF = "tel:0967-291-352";
 const LINE_ID = "@384dvqmw";
@@ -170,7 +170,7 @@ export default function Home() {
           </div>
           <a
             href="/line"
-            className="mx-auto block w-full max-w-sm overflow-hidden rounded-lg border border-paper/10 shadow-2xl shadow-black/40 transition-transform hover:scale-[1.02] md:max-w-none"
+            className="mx-auto block w-full max-w-sm overflow-hidden rounded-lg transition-transform hover:scale-[1.02] md:max-w-none"
           >
             <Image
               src="/hero-mascot.jpg"

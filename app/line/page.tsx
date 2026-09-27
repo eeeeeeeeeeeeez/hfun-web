@@ -26,17 +26,6 @@ export default function LinePage() {
         </span>
       </a>
 
-      <div className="mx-auto w-full max-w-sm overflow-hidden rounded-lg border border-paper/10 shadow-2xl shadow-black/40">
-        <Image
-          src="/hero-mascot.jpg"
-          alt="好放貸專業資金規劃諮詢：全程線上辦理、隱私保密、免保人"
-          width={1000}
-          height={1000}
-          priority
-          className="h-full w-full object-cover"
-        />
-      </div>
-
       <p className="mt-8 font-serif text-sm font-medium tracking-wide text-gold-light">
         2026年小額貸款利率最優選
       </p>
