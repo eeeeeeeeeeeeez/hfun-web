@@ -6,9 +6,9 @@ const config: Config = {
     extend: {
       colors: {
         navy: {
-          950: "#1D2647",
-          800: "#2A3660",
-          700: "#34406E",
+          950: "#0B2A6C",
+          800: "#123489",
+          700: "#1B3F9E",
         },
         paper: "#F4F6F8",
         steel: {
@@ -16,10 +16,10 @@ const config: Config = {
           light: "#6FA8C7",
           dark: "#1F4F6E",
         },
-        leaf: {
-          DEFAULT: "#5EA24B",
-          light: "#8CC97E",
-          dark: "#3D7A34",
+        gold: {
+          DEFAULT: "#F0B93D",
+          light: "#FBD158",
+          dark: "#C9932A",
         },
         silver: "#C9CFD6",
         ink: "#1A2233",

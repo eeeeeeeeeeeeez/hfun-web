@@ -138,7 +138,7 @@ export default function Home() {
       <section className="bg-navy-950 text-paper">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 py-20 md:grid-cols-[1.1fr_1fr] md:py-24">
           <div>
-            <p className="font-serif text-sm font-medium tracking-wide text-leaf-light">
+            <p className="font-serif text-sm font-medium tracking-wide text-gold-light">
               好放貸，就是好貸
             </p>
             <h1 className="mt-4 max-w-md font-serif text-4xl font-bold leading-tight md:text-5xl">
@@ -207,9 +207,9 @@ export default function Home() {
             {services.map((s, i) => (
               <div
                 key={s.title}
-                className={`border-l-2 bg-paper p-6 ${i % 2 === 0 ? "border-steel" : "border-leaf"}`}
+                className={`border-l-2 bg-paper p-6 ${i % 2 === 0 ? "border-steel" : "border-gold"}`}
               >
-                <s.Icon className={`h-8 w-8 ${i % 2 === 0 ? "text-steel-dark" : "text-leaf-dark"}`} />
+                <s.Icon className={`h-8 w-8 ${i % 2 === 0 ? "text-steel-dark" : "text-gold-dark"}`} />
                 <h3 className="mt-4 font-serif text-lg font-medium text-navy-950">{s.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink/70">{s.desc}</p>
               </div>
@@ -264,7 +264,7 @@ export default function Home() {
               <li key={step.title} className="relative pl-0">
                 <span
                   className={`font-serif text-4xl font-bold ${
-                    i % 2 === 0 ? "text-steel/50" : "text-leaf/50"
+                    i % 2 === 0 ? "text-steel/50" : "text-gold/50"
                   }`}
                 >
                   {String(i + 1).padStart(2, "0")}
@@ -330,7 +330,7 @@ export default function Home() {
       {/* Fraud warning */}
       <section className="border-t border-navy-950/10 bg-navy-950 py-16 text-paper">
         <div className="mx-auto max-w-3xl px-6">
-          <h2 className="font-serif text-xl font-bold text-leaf-light">防範詐騙提醒</h2>
+          <h2 className="font-serif text-xl font-bold text-gold-light">防範詐騙提醒</h2>
           <p className="mt-3 text-sm text-paper/70">保護您的財產安全，認識正規貸款的重要原則：</p>
           <ul className="mt-5 space-y-2 text-sm leading-relaxed text-paper/85">
             <li>・請不要提供銀行存摺及提款卡，以免成為詐騙集團的共犯。</li>
